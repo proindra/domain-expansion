@@ -57,7 +57,7 @@
 .searchInput {
     width: 100%;
     padding: 10px 16px 10px 40px;
-    background: #ffffff;
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     color: var(--text-primary);
@@ -84,7 +84,7 @@
 }
 
 .recentCard {
-    background: #ffffff;
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 12px;

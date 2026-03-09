@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: #ffffff;
+    background: var(--bg-primary);
 }
 
 .toolbar {
@@ -11,7 +11,7 @@
     justify-content: space-between;
     padding: 12px 24px;
     border-bottom: 1px solid var(--border-color);
-    background: #ffffff;
+    background: var(--bg-primary);
     gap: 16px;
 }
 
@@ -125,7 +125,7 @@
 .viewerContainer {
     flex: 1;
     overflow-y: auto;
-    background: #ffffff;
+    background: var(--bg-primary);
     /* Stitch screenshot has white background for document area */
     display: flex;
     justify-content: center;
