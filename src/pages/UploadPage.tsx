@@ -6,6 +6,7 @@ import { CATEGORIES } from '../data/notes';
 import type { Note } from '../data/notes';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 import styles from './UploadPage.module.css';
 
 const CATEGORY_OPTIONS = CATEGORIES.filter((c) => c !== 'All');
@@ -246,7 +247,11 @@ const UploadPage: React.FC = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.97 }}
                             >
-                                {uploading ? `Uploading... ${progress}%` : '⬆️ Upload Note'}
+                                {uploading ? `Uploading... ${progress}%` : (
+                                    <>
+                                        <UploadFileIcon fontSize="small" /> Upload Note
+                                    </>
+                                )}
                             </motion.button>
                         </motion.form>
                     )}
