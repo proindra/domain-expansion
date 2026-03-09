@@ -25,7 +25,7 @@
 .emptyState {
     text-align: center;
     padding: 100px 20px;
-    background: #ffffff;
+    background: var(--card-bg);
     border: 1px dashed var(--border-color);
     border-radius: 12px;
     color: var(--text-muted);
