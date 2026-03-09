@@ -97,8 +97,9 @@ export const NotesProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     );
 };
 
-export const useNotes = () => {
+// eslint-disable-next-line react-refresh/only-export-components
+export function useNotes() {
     const ctx = useContext(NotesContext);
     if (!ctx) throw new Error('useNotes must be used inside NotesProvider');
     return ctx;
-};
+}
