@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import Topbar from '../components/Topbar/Topbar';
 import ChatSidebar from '../components/ChatSidebar/ChatSidebar';
 import LetterGlitch from '../components/LetterGlitch/LetterGlitch';
+import { useSettings } from '../context/SettingsContext';
 import styles from './AppLayout.module.css';
 
 const pageVariants = {
@@ -19,10 +20,11 @@ const AppLayout: React.FC = () => {
     const location = useLocation();
     const [leftSidebarOpen, setLeftSidebarOpen] = useState(true);
     const [chatSidebarOpen, setChatSidebarOpen] = useState(true);
+    const { isGlitchBgActive } = useSettings();
 
     return (
         <div className={styles.layout}>
-            <LetterGlitch glitchSpeed={50} centerVignette={true} outerVignette={false} smooth={true} />
+            {isGlitchBgActive && <LetterGlitch glitchSpeed={50} centerVignette={true} outerVignette={false} smooth={true} />}
             {/* Left Nav Pane */}
             <AnimatePresence initial={false}>
                 {leftSidebarOpen && (

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { NotesProvider } from './context/NotesContext';
+import { SettingsProvider } from './context/SettingsContext';
 import AppLayout from './layouts/AppLayout';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
@@ -18,7 +19,8 @@ const App: React.FC = () => {
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ThemeProvider>
         <NotesProvider>
-          <Routes>
+          <SettingsProvider>
+            <Routes>
             {/* Landing Page at root — no sidebar/topbar */}
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
@@ -32,7 +34,8 @@ const App: React.FC = () => {
               <Route path="upload" element={<UploadPage />} />
               <Route path="viewer/:id" element={<PDFViewerPage />} />
             </Route>
-          </Routes>
+            </Routes>
+          </SettingsProvider>
         </NotesProvider>
       </ThemeProvider>
     </BrowserRouter>
