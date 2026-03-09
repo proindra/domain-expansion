@@ -1,0 +1,86 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    background: #f1f5f9;
+    /* Outer backdrop matching screenshot */
+    overflow: hidden;
+    padding: 16px;
+    /* Floating gap around the app */
+    gap: 16px;
+}
+
+/* Inner wrappers to create the floating card effect */
+.sidebarContainer {
+    width: 280px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    min-width: 0;
+    /* Important for flex children to allow truncate */
+}
+
+.chatContainer {
+    width: 320px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.contentWrapper {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+    background: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .chatContainer {
+        display: none;
+        /* Hide chat on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        padding: 0;
+        gap: 0;
+    }
+
+    .sidebarContainer {
+        display: none;
+        /* In real app, toggle this */
+    }
+
+    .mainContainer {
+        border-radius: 0;
+        border: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,110 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    min-height: 60px;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbItem {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.breadcrumbItem:hover {
+    color: var(--text-primary);
+}
+
+.breadcrumbCurrent {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.breadcrumbSeparator {
+    color: var(--border-color);
+    font-size: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.iconBtn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-hover);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0 1px var(--border-color) inset;
+}
+
+/* User avatar placeholder image */
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userName {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    max-width: 100px;
+    line-height: 1.2;
+}
+
+.userName span {
+    display: block;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 400;
+}

@@ -1,0 +1,37 @@
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.preview {
+    height: 140px;
+}
+
+.body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titleLine {
+    height: 16px;
+    width: 75%;
+}
+
+.subtitleLine {
+    height: 12px;
+    width: 50%;
+}
+
+.descLine1 {
+    height: 11px;
+    width: 100%;
+}
+
+.descLine2 {
+    height: 11px;
+    width: 80%;
+}

@@ -1,0 +1,229 @@
+.page {
+    max-width: 700px;
+    padding: 32px;
+}
+
+.heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.2px;
+}
+
+.required {
+    color: var(--accent);
+    margin-left: 2px;
+}
+
+.input,
+.textarea,
+.select {
+    padding: 11px 14px;
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 4px rgba(13, 94, 66, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 96px;
+}
+
+.select {
+    cursor: pointer;
+    appearance: none;
+}
+
+.fileUpload {
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 36px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--bg-sidebar);
+}
+
+.fileUpload:hover,
+.fileUpload.dragging {
+    border-color: var(--accent-primary);
+    background: var(--bg-hover);
+}
+
+.fileUploadIcon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.fileUploadTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.fileUploadSub {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.fileChosen {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.progressWrapper {
+    margin-top: 4px;
+}
+
+.progressLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.progressTrack {
+    height: 8px;
+    background: var(--bg-hover);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    border-radius: 8px;
+    background: var(--accent-primary);
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+.row .fieldGroup {
+    flex: 1;
+}
+
+.submitBtn {
+    padding: 13px 32px;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: var(--success);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 94, 66, 0.2);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success {
+    text-align: center;
+    padding: 48px;
+}
+
+.successIcon {
+    font-size: 56px;
+    margin-bottom: 16px;
+}
+
+.successTitle {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.successDesc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.resetBtn {
+    padding: 10px 24px;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.resetBtn:hover {
+    background: var(--bg-sidebar);
+    border-color: var(--text-muted);
+}

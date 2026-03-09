@@ -1,0 +1,48 @@
+.page {
+    padding: 32px;
+}
+
+.heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 100px 20px;
+    background: #ffffff;
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    color: var(--text-muted);
+}
+
+.emptyIcon {
+    font-size: 60px;
+    margin-bottom: 16px;
+}
+
+.emptyTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.emptyDesc {
+    font-size: 14px;
+}

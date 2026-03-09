@@ -1,0 +1,148 @@
+export interface Note {
+    id: number;
+    title: string;
+    category: string;
+    file: string;
+    date: string;
+    description: string;
+    pages: number;
+    author: string;
+    color: string;
+}
+
+export const NOTES: Note[] = [
+    {
+        id: 1,
+        title: "Calculus Notes",
+        category: "Mathematics",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-03-01",
+        description: "Comprehensive notes on differential and integral calculus, limits, derivatives, and applications.",
+        pages: 48,
+        author: "Prof. A. Sharma",
+        color: "#4a74f2",
+    },
+    {
+        id: 2,
+        title: "Quantum Physics",
+        category: "Physics",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-02-20",
+        description: "Introduction to quantum mechanics, wave-particle duality, Schrödinger equation, and uncertainty principle.",
+        pages: 62,
+        author: "Dr. R. Mehta",
+        color: "#a855f7",
+    },
+    {
+        id: 3,
+        title: "Organic Chemistry",
+        category: "Chemistry",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-02-14",
+        description: "Reaction mechanisms, functional groups, named reactions, and synthesis pathways in organic chemistry.",
+        pages: 75,
+        author: "Dr. S. Iyer",
+        color: "#10b981",
+    },
+    {
+        id: 4,
+        title: "Cell Biology",
+        category: "Biology",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-01-28",
+        description: "Cell structure, organelles, cell division, mitosis, meiosis, and cellular respiration.",
+        pages: 55,
+        author: "Prof. N. Kapoor",
+        color: "#f59e0b",
+    },
+    {
+        id: 5,
+        title: "World War II History",
+        category: "History",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-01-15",
+        description: "Causes, key events, battles, political movements, and aftermath of the Second World War.",
+        pages: 90,
+        author: "Prof. K. Ray",
+        color: "#ef4444",
+    },
+    {
+        id: 6,
+        title: "Data Structures & Algorithms",
+        category: "Computer Science",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-03-05",
+        description: "Arrays, linked lists, trees, graphs, sorting algorithms, dynamic programming, and complexity analysis.",
+        pages: 110,
+        author: "Prof. V. Singh",
+        color: "#0ea5e9",
+    },
+    {
+        id: 7,
+        title: "Linear Algebra",
+        category: "Mathematics",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-02-09",
+        description: "Vectors, matrices, determinants, eigenvalues, linear transformations, and applications.",
+        pages: 58,
+        author: "Prof. A. Sharma",
+        color: "#4a74f2",
+    },
+    {
+        id: 8,
+        title: "Thermodynamics",
+        category: "Physics",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-01-31",
+        description: "Laws of thermodynamics, entropy, heat engines, Carnot cycle, and statistical mechanics.",
+        pages: 66,
+        author: "Dr. R. Mehta",
+        color: "#a855f7",
+    },
+    {
+        id: 9,
+        title: "Machine Learning Basics",
+        category: "Computer Science",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-03-08",
+        description: "Supervised and unsupervised learning, regression, classification, neural networks, and model evaluation.",
+        pages: 88,
+        author: "Prof. V. Singh",
+        color: "#0ea5e9",
+    },
+    {
+        id: 10,
+        title: "Indian Independence Movement",
+        category: "History",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-02-03",
+        description: "Timeline, key leaders, non-cooperation movement, Quit India movement, and partition of India.",
+        pages: 45,
+        author: "Prof. K. Ray",
+        color: "#ef4444",
+    },
+    {
+        id: 11,
+        title: "Genetics & Heredity",
+        category: "Biology",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-02-22",
+        description: "Mendelian genetics, DNA structure, mutations, genetic disorders, and modern applications.",
+        pages: 70,
+        author: "Prof. N. Kapoor",
+        color: "#f59e0b",
+    },
+    {
+        id: 12,
+        title: "Electrochemistry",
+        category: "Chemistry",
+        file: "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1/Overview.html",
+        date: "2026-01-20",
+        description: "Electrochemical cells, electrolysis, electrode potentials, Faradays laws, and batteries.",
+        pages: 40,
+        author: "Dr. S. Iyer",
+        color: "#10b981",
+    },
+];
+
+export const CATEGORIES = ["All", ...Array.from(new Set(NOTES.map((n) => n.category)))];

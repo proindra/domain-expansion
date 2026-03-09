@@ -1,0 +1,294 @@
+.sidebar {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* 1. Slim Icon Strip (Leftmost) */
+.slimBar {
+    width: 60px;
+    background: #ffffff;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    gap: 24px;
+}
+
+.workspaceIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f59e0b, #10b981);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.workspaceIcon::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: white;
+    border-radius: 4px;
+}
+
+.slimNav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+.slimBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.slimBtn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.slimBtn.active {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.bottomIcons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 2. Main Sidebar Area (Right pane of sidebar) */
+.mainArea {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.headerTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Main Nav Items (Resources, Terms, etc.) */
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.navItem:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.navItem.active {
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.navItemIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search */
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 16px 0;
+    transition: border-color 0.2s;
+}
+
+.searchBox:focus-within {
+    border-color: var(--text-muted);
+}
+
+.searchInput {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchIcon {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Tree Section */
+.treeSection {
+    margin-top: 8px;
+}
+
+.treeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.treeAddBtn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.treeAddBtn:hover {
+    color: var(--text-primary);
+}
+
+/* Tree Node */
+.treeNode {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 13px;
+    user-select: none;
+    position: relative;
+}
+
+.treeNode:hover {
+    background: var(--bg-hover);
+}
+
+.treeNode.active {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.treeRowIndent {
+    margin-left: 20px;
+}
+
+.treeRowIndent2 {
+    margin-left: 40px;
+}
+
+.arrow {
+    display: inline-block;
+    font-size: 10px;
+    transition: transform 0.2s;
+    color: var(--text-muted);
+    width: 12px;
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+}
+
+.nodeIcon {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+/* Action Tags */
+.actionBadge {
+    margin-left: auto;
+    background: var(--text-secondary);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.treeFile {
+    color: var(--text-primary);
+    font-weight: 500;
+    background: var(--bg-hover);
+}
+
+.treeFile:hover {
+    background: var(--bg-hover);
+}
+
+.toggleSidebarBtn {
+    margin-top: auto;
+    padding: 20px;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.toggleSidebarBtn:hover {
+    color: var(--text-primary);
+}
