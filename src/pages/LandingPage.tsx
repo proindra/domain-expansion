@@ -12,6 +12,7 @@ import BlurOnRoundedIcon from '@mui/icons-material/BlurOnRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
 import AutoAwesomeMosaicOutlinedIcon from '@mui/icons-material/AutoAwesomeMosaicOutlined';
+import Lightning from '../components/Lightning/Lightning';
 
 const FEATURES = [
     {
@@ -42,6 +43,11 @@ const LandingPage: React.FC = () => {
 
     return (
         <div className={styles.page}>
+            {/* Lightning Background */}
+            <div style={{ width: '100%', height: '100%', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
+                <Lightning hue={280} xOffset={0.5} speed={1.5} intensity={1} size={1} />
+            </div>
+
             {/* Background */}
             <div className={styles.bg}>
                 <div className={styles.bgStars} />
