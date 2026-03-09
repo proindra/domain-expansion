@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineRounded';
-import AttachmentRoundedIcon from '@mui/icons-material/AttachmentRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import styles from './ChatSidebar.module.css';
+import botIcon from '../../../bot_icon.png';
 
 interface Message {
     id: string;
@@ -11,6 +11,7 @@ interface Message {
 }
 
 const ChatSidebar: React.FC = () => {
+    const messagesEndRef = useRef<HTMLDivElement>(null);
     const [messages, setMessages] = useState<Message[]>([
         {
             id: '1',
@@ -39,6 +40,10 @@ const ChatSidebar: React.FC = () => {
         },
     ]);
     const [inputValue, setInputValue] = useState('');
+
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages]);
 
     const handleSend = () => {
         if (!inputValue.trim()) return;
@@ -89,7 +94,7 @@ const ChatSidebar: React.FC = () => {
                     >
                         {msg.sender === 'bot' && (
                             <div className={`${styles.avatar} ${styles.bot}`}>
-                                <ChatBubbleOutlineRoundedIcon sx={{ fontSize: 14 }} />
+                                <img src={botIcon} alt="Bot Sukuna" className={styles.botIcon} />
                             </div>
                         )}
                         <div className={`${styles.bubble} ${msg.sender === 'bot' ? styles.bot : styles.user}`}>
@@ -97,6 +102,7 @@ const ChatSidebar: React.FC = () => {
                         </div>
                     </div>
                 ))}
+                <div ref={messagesEndRef} />
             </div>
 
             {/* Input Area */}
@@ -110,9 +116,6 @@ const ChatSidebar: React.FC = () => {
                         onChange={(e) => setInputValue(e.target.value)}
                         onKeyDown={handleKeyDown}
                     />
-                    <button className={styles.actionBtn}>
-                        <AttachmentRoundedIcon sx={{ fontSize: 18 }} />
-                    </button>
                     <button className={`${styles.actionBtn} ${styles.send}`} onClick={handleSend}>
                         <SendRoundedIcon sx={{ fontSize: 18 }} />
                     </button>

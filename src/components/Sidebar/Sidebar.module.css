@@ -20,18 +20,11 @@
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background: linear-gradient(135deg, #f59e0b, #10b981);
+    background-image: url('/main_icon.jpeg');
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
     margin-bottom: 16px;
-    position: relative;
-}
-
-.workspaceIcon::after {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    background: white;
-    border-radius: 4px;
 }
 
 .slimNav {
