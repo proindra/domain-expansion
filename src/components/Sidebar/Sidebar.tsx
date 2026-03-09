@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleLeftSidebar }) => {
             {/* 2. Main Sidebar Area */}
             <div className={styles.mainArea}>
                 <div className={styles.header}>
-                    <HomeOutlineRoundedIcon sx={{ fontSize: 18, color: '#cbd5e1' }} />
+                    <HomeOutlineRoundedIcon sx={{ fontSize: 18, color: 'var(--text-secondary)' }} />
                     <span className={styles.headerTitle}>KNOWLEDGE CENTER</span>
                 </div>
 

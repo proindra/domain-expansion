@@ -7,8 +7,8 @@
 /* 1. Slim Icon Strip (Leftmost) */
 .slimBar {
     width: 60px;
-    background: #0f1117;
-    border-right: 1px solid #2d3748;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -50,13 +50,13 @@
 }
 
 .slimBtn:hover {
-    background: #1e293b;
-    color: #ffffff;
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 
 .slimBtn.active {
-    background: #1e293b;
-    color: #ffffff;
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 
 .bottomIcons {
@@ -69,7 +69,7 @@
 /* 2. Main Sidebar Area (Right pane of sidebar) */
 .mainArea {
     flex: 1;
-    background: #0f1117;
+    background: var(--sidebar-bg);
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -81,13 +81,13 @@
     align-items: center;
     gap: 12px;
     padding: 0 20px;
-    border-bottom: 1px solid #2d3748;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .headerTitle {
     font-size: 13px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -108,7 +108,7 @@
     gap: 12px;
     padding: 8px 12px;
     border-radius: 8px;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
@@ -117,13 +117,13 @@
 }
 
 .navItem:hover {
-    background: #1e293b;
-    color: #ffffff;
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 
 .navItem.active {
     background: rgba(74, 116, 242, 0.2);
-    color: #60a5fa;
+    color: var(--text-accent);
     font-weight: 600;
 }
 
@@ -138,8 +138,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 8px 12px;
     margin: 16px 0;
@@ -147,7 +147,7 @@
 }
 
 .searchBox:focus-within {
-    border-color: #64748b;
+    border-color: var(--text-muted);
 }
 
 .searchInput {
@@ -155,16 +155,16 @@
     background: transparent;
     outline: none;
     font-size: 13px;
-    color: #ffffff;
+    color: var(--text-primary);
     width: 100%;
 }
 
 .searchInput::placeholder {
-    color: #64748b;
+    color: var(--text-muted);
 }
 
 .searchIcon {
-    color: #cbd5e1;
+    color: var(--text-secondary);
     font-size: 16px;
 }
 
@@ -180,7 +180,7 @@
     padding: 8px 0;
     font-size: 11px;
     font-weight: 700;
-    color: #64748b;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -189,7 +189,7 @@
 .treeAddBtn {
     background: none;
     border: none;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     cursor: pointer;
     font-size: 14px;
     display: flex;
@@ -198,7 +198,7 @@
 }
 
 .treeAddBtn:hover {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /* Tree Node */
@@ -209,20 +209,20 @@
     padding: 6px 8px;
     border-radius: 6px;
     cursor: pointer;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     font-size: 13px;
     user-select: none;
     position: relative;
 }
 
 .treeNode:hover {
-    background: #1e293b;
-    color: #ffffff;
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 
 .treeNode.active {
     background: rgba(74, 116, 242, 0.2);
-    color: #60a5fa;
+    color: var(--text-accent);
 }
 
 .treeRowIndent {
@@ -237,7 +237,7 @@
     display: inline-block;
     font-size: 10px;
     transition: transform 0.2s;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     width: 12px;
 }
 
@@ -246,7 +246,7 @@
 }
 
 .nodeIcon {
-    color: #cbd5e1;
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
 }
@@ -254,8 +254,8 @@
 /* Action Tags */
 .actionBadge {
     margin-left: auto;
-    background: #475569;
-    color: white;
+    background: var(--bg-hover);
+    color: var(--text-primary);
     font-size: 10px;
     font-weight: 600;
     padding: 2px 6px;
@@ -263,7 +263,7 @@
 }
 
 .treeFile {
-    color: #f8fafc;
+    color: var(--text-primary);
     font-weight: 500;
     background: transparent;
 }
@@ -275,7 +275,7 @@
 .toggleSidebarBtn {
     margin-top: auto;
     padding: 20px;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     background: none;
     border: none;
     cursor: pointer;
@@ -284,5 +284,5 @@
 }
 
 .toggleSidebarBtn:hover {
-    color: #ffffff;
+    color: var(--text-primary);
 }
