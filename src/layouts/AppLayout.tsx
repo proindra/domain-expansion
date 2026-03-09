@@ -19,7 +19,7 @@ const pageTransition = { duration: 0.3, ease: 'easeOut' as const };
 const AppLayout: React.FC = () => {
     const location = useLocation();
     const [leftSidebarOpen, setLeftSidebarOpen] = useState(true);
-    const [chatSidebarOpen, setChatSidebarOpen] = useState(true);
+    const [chatSidebarOpen, setChatSidebarOpen] = useState(false);
     const { isGlitchBgActive } = useSettings();
 
     return (

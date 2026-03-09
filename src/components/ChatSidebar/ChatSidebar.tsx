@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import styles from './ChatSidebar.module.css';
 import botIcon from '../../../bot_icon.png';
+import fingerIcon from '../../../finger_icon.png';
 
 interface Message {
     id: string;
@@ -78,7 +78,7 @@ const ChatSidebar: React.FC = () => {
             {/* Header */}
             <div className={styles.header}>
                 <div className={styles.icon}>
-                    <ChatBubbleOutlineRoundedIcon sx={{ fontSize: 18 }} />
+                    <img src={fingerIcon} alt="Chat" style={{ width: 18, height: 18, transform: 'scale(1.8)', borderRadius: '50%' }} />
                 </div>
                 <div className={styles.title}>Bot Sukuna</div>
             </div>

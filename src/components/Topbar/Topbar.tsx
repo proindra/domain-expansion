@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import NotificationsNoneRoundedIcon from '@mui/icons-material/NotificationsNoneRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import MenuOpenRoundedIcon from '@mui/icons-material/MenuOpenRounded';
-import ViewSidebarRoundedIcon from '@mui/icons-material/ViewSidebarRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './Topbar.module.css';
@@ -71,12 +70,12 @@ const Topbar: React.FC<TopbarProps> = ({
             <div className={styles.actions}>
                 <motion.button
                     className={styles.iconBtn}
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={toggleChatSidebar}
-                    title={chatSidebarOpen ? "Hide BrightBot" : "Show BrightBot"}
+                    title={chatSidebarOpen ? "Hide Bot Sukuna" : "Show Bot Sukuna"}
                 >
-                    <ViewSidebarRoundedIcon sx={{ fontSize: 18, color: chatSidebarOpen ? 'var(--accent-primary)' : 'inherit' }} />
+                    <span style={{ fontSize: 18, color: chatSidebarOpen ? 'var(--accent-primary)' : 'inherit' }}>✨</span>
                 </motion.button>
                 <motion.button
                     className={styles.iconBtn}
