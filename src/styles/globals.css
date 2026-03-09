@@ -8,13 +8,13 @@
   --accent-glow: rgba(74, 116, 242, 0.25);
 
   /* Dark Mode */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1f2937;
-  --bg-elevated: #1f2937;
-  --sidebar-bg: #111827;
-  --card-bg: #111827;
-  --topbar-bg: rgba(17, 24, 39, 0.85);
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #171717;
+  --bg-elevated: #171717;
+  --sidebar-bg: #0a0a0a;
+  --card-bg: #0a0a0a;
+  --topbar-bg: rgba(10, 10, 10, 0.85);
 
   /* Text */
   --text-primary: #f8fafc;
@@ -48,10 +48,10 @@
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-med: 0.25s ease;
-  --bg-hover: #1e293b;
+  --bg-hover: #1f1f1f;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --border-color: #334155;
+  --border-color: #262626;
 }
 
 /* ===== Reset ===== */
