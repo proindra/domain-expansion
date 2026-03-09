@@ -13,6 +13,9 @@ import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded
 import UploadFileRoundedIcon from '@mui/icons-material/UploadFileRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
+import VisibilityRoundedIcon from '@mui/icons-material/VisibilityRounded';
+import VisibilityOffRoundedIcon from '@mui/icons-material/VisibilityOffRounded';
+import { useSettings } from '../../context/SettingsContext';
 import styles from './Sidebar.module.css';
 
 const navItems = [
@@ -30,6 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleLeftSidebar }) => {
     const location = useLocation();
     const navigate = useNavigate();
     const [metricsOpen, setMetricsOpen] = useState(true);
+    const { isGlitchBgActive, toggleGlitchBg } = useSettings();
 
     return (
         <aside className={styles.sidebar}>
@@ -45,6 +49,9 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleLeftSidebar }) => {
                 </div>
 
                 <div className={styles.bottomIcons}>
+                    <button className={styles.slimBtn} onClick={toggleGlitchBg} title={isGlitchBgActive ? "Hide Glitch Background" : "Show Glitch Background"}>
+                        {isGlitchBgActive ? <VisibilityRoundedIcon fontSize="small" /> : <VisibilityOffRoundedIcon fontSize="small" />}
+                    </button>
                     <button className={styles.slimBtn}><HelpOutlineRoundedIcon fontSize="small" /></button>
                     <button className={styles.slimBtn} onClick={() => navigate('/')} title="Logout"><LoginRoundedIcon fontSize="small" /></button>
                 </div>
