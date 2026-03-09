@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Topbar from '../components/Topbar/Topbar';
 import ChatSidebar from '../components/ChatSidebar/ChatSidebar';
+import LetterGlitch from '../components/LetterGlitch/LetterGlitch';
 import styles from './AppLayout.module.css';
 
 const pageVariants = {
@@ -21,6 +22,7 @@ const AppLayout: React.FC = () => {
 
     return (
         <div className={styles.layout}>
+            <LetterGlitch glitchSpeed={50} centerVignette={true} outerVignette={false} smooth={true} />
             {/* Left Nav Pane */}
             <AnimatePresence initial={false}>
                 {leftSidebarOpen && (
